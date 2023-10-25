@@ -16,6 +16,28 @@ Performs a double-sha256 hash on STDIN.
 go get -u github.com/nmarley/dsha256
 ```
 
+## Build
+
+You can use the standard build process:
+
+```sh
+go build
+```
+
+... but by using [TinyGo](https://tinygo.org) + strip, the binary can be made
+much smaller:
+
+```sh
+tinygo build
+llvm-strip dsha256
+```
+
+A Makefile is included for convenience:
+
+```sh
+make
+```
+
 ## Usage
 
 Example:
